@@ -1,0 +1,12 @@
+<svg width="100%" height="40" viewBox="0 0 1200 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="hud divider">
+  <line x1="60" y1="20" x2="1140" y2="20" stroke="#71797E" stroke-width="1.5" />
+
+  <path d="M20 8 L20 32 M20 8 L36 8 M20 32 L36 32" fill="none" stroke="#C0C0C0" stroke-width="2" />
+  <path d="M1180 8 L1180 32 M1180 8 L1164 8 M1180 32 L1164 32" fill="none" stroke="#C0C0C0" stroke-width="2" />
+
+  <rect x="60" y="17" width="90" height="6" fill="#3B82F6" />
+  <rect x="1050" y="17" width="90" height="6" fill="#DC2626" />
+
+  <circle cx="600" cy="20" r="4" fill="#C0C0C0" />
+  <circle cx="600" cy="20" r="8" fill="none" stroke="#71797E" stroke-width="1" />
+</svg>

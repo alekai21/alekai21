@@ -15,6 +15,9 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Generate snake SVG
         uses: Platane/snk@v3
         id: snake
