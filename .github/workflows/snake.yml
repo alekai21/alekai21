@@ -1,0 +1,31 @@
+name: Generate Snake Animation
+
+on:
+  schedule:
+    - cron: "0 4 * * *"   # diario a las 04:00 UTC (~00:00 hora Bolivia, UTC-4)
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate snake SVG
+        uses: Platane/snk@v3
+        id: snake
+        with:
+          github_user_name: alekai21
+          outputs: |
+            assets/contributions-snake-dark.svg?color_snake=3B82F6&color_dots=0D1117,71797E,C0C0C0,3B82F6,DC2626
+            assets/contributions-snake-light.svg?color_snake=DC2626&color_dots=D3D3D3,C0C0C0,71797E,3B82F6,0D1117
+
+      - name: Push generated SVG
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update contribution snake [skip ci]"
+          file_pattern: assets/contributions-snake-*.svg
